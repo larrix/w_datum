@@ -1,0 +1,11 @@
+{% extends 'establecimientos/base.html' %}
+
+{% block body %}
+
+    <ul>
+        {% for establecimiento in lista_estableciemiento %}
+            <li>{{ establecimiento.nombre }} ' - ' {{ establecimiento.nro }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock%}
