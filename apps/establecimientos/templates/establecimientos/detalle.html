@@ -1,0 +1,12 @@
+{% extends 'establecimientos/base.html' %}
+{% block title %} Detalles del Establecimiento{% endblock %}
+
+{% block body %}
+
+    <h1>{{ establecimiento.nombre}}</h1>
+    <h3>Número {{ establecimiento.nro }}</h3>
+    <h3>Latitud: {{ establecimiento.lat }}</h3>
+    <h3>Longitud: {{ establecimiento.long }}</h3>
+    <h3>Regimen de tenencia: {{ establecimiento.regimen }}</h3>
+
+{% endblock %}

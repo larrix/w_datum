@@ -1,0 +1,14 @@
+{% extends 'establecimientos/base.html' %}
+
+<title>{% block title %}Registro de Usuario{% endblock %}</title>
+
+<h2>Crear una nueva cuenta</h2>
+<br>
+{% block body %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enviar</button>
+
+</form>
+{% endblock %}

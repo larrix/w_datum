@@ -1,10 +1,12 @@
 {% extends 'establecimientos/base.html' %}
 
+<title>{% block title %}Listado de Establecimientos{% endblock %}</title>
+
 {% block body %}
 
     <ul>
         {% for establecimiento in lista_estableciemiento %}
-            <li>{{ establecimiento.nombre }}  -  {{ establecimiento.nro }}</li>
+            <a href="{% url 'establecimientos:detalle' establecimiento.id %}" >{{ establecimiento.nombre }}  -  {{ establecimiento.nro }}</a>
             <br>
         {% endfor %}
     </ul>
