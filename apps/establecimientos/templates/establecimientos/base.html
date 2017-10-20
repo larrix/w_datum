@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
     <style>
-        ul {
+        nav ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
         overflow: hidden;
         background-color: #269900;
         font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+        font-size: small;
         }
 
-        li {
+        nav li {
         float: left;
         }
 
-        li a {
+        nav li a {
         display: block;
         color: white;
         text-align: center;
@@ -23,7 +24,7 @@
         text-decoration: none;
         }
 
-        li a:hover {
+        nav li a:hover {
         background-color: #33cc00;
         }
     </style>
@@ -32,10 +33,12 @@
 
 </head>
 <body>
-    <ul>
-        <li><a class="active" href="#home">Inicio</a></li>
-        <li><a href={% url 'establecimientos:establemiento-agregar' %}>Agregar Establecimiento</a></li>
-    </ul>
+    <nav>
+        <ul>
+            <li><a class="active" href="{% url 'establecimientos:listar' %}">Inicio</a></li>
+            <li><a href={% url 'establecimientos:establemiento-agregar' %}>Agregar Establecimiento</a></li>
+        </ul>
+    </nav>
 
 
 

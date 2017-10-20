@@ -1,11 +1,29 @@
-{% extends 'establecimientos/base.html' %}
 
-{% block body %}
+<form method="post">
+    {% csrf_token %}
+    <div class="row">
+        <div>
+            <div>
+                <label for="username">Nombre de Usuario:</label>
+                <input class="form-control" type="text" name="username">
+            </div>
+        </div>
+    </div>
 
-    <ul>
-        {% for establecimiento in lista_estableciemiento %}
-            <li>{{ establecimiento.nombre }} ' - ' {{ establecimiento.nro }}</li>
-        {% endfor %}
-    </ul>
+    <div>
+        <div>
+            <div>
+                <label for="username">Contraseña:</label>
+                <input class="form-control" type="password" name="password">
+            </div>
+        </div>
+    </div>
 
-{% endblock%}
+    <div>
+        <div>
+            <div>
+                <input class="button" type="submit" value="Ingresar">
+            </div>
+        </div>
+    </div>
+</form>
